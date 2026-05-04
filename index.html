@@ -271,7 +271,7 @@ const destroyChart = (id) => { if (charts[id]) { charts[id].destroy(); delete ch
 // ── FETCH DATA ──
 async function fetchData() {
   try {
-    const r = await fetch('/data.json?t=' + Date.now());
+    const r = await fetch('./data.json?t=' + Date.now());
     const d = await r.json();
     if (!d || Object.keys(d).length === 0 || !d.currentWeek) {
       showNoData(); return;
