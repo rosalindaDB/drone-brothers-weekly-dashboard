@@ -310,7 +310,7 @@ function render() {
 // TAB 1: WEEKLY P&L
 // ══════════════════════════════════════════════════
 function renderWeekly(cw, history) {
-  const rev = cw.flightRevenue || 0;
+  const rev = cw.grossRevenue || 0;
   const costs = cw.totalOperatingExpenses || 0;
   const pilot = cw.pilotPay || 0;
   const net = cw.netPnL || 0;
@@ -495,7 +495,7 @@ function renderMonthly() {
 // ══════════════════════════════════════════════════
 function renderFlights(cw, monthlyFlights) {
   const flights = cw.flightsExecuted || 0;
-  const rev = cw.grossRevenue || 0;
+  const rev = cw.flightRevenue || 0;
   const pilot = cw.pilotPay || 0;
   const avg = flights > 0 ? rev / flights : 0;
 
